@@ -78,6 +78,9 @@ class CarouselProducts {
     productNameDOM.textContent = product.name;
     productNameDOM.className = "product_name";
     productInfoDOM.className = "product_info";
+    productNameDOM.addEventListener("click", () => {
+      window.open(product.url, "__blank");
+    });
     productInfoDOM.appendChild(productNameDOM);
 
     productPrice.textContent = `${product.price} TL`;
